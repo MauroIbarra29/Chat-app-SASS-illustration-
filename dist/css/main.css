@@ -1,0 +1,427 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.geometry {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e942ff), to(#8838ff));
+  background: linear-gradient(to bottom, #e942ff, #8838ff);
+  position: absolute;
+  width: 480px;
+  height: 840px;
+  left: -210px;
+  top: -200px;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  z-index: -1;
+  opacity: .9;
+}
+
+body {
+  background-color: #f5f3f7;
+}
+
+main.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.phone__wrapper {
+  width: 330px;
+  height: auto;
+  background-color: white;
+  -webkit-box-shadow: .1px .1px 80px .2px #837e7e;
+          box-shadow: .1px .1px 80px .2px #837e7e;
+  margin: 50px 50px 0 50px;
+  border-radius: 15px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.phone__nav {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  width: 100%;
+  border-radius: 18px 18px 2px 2px;
+  padding: .5rem;
+  padding-top: 1.5rem;
+  background: -webkit-gradient(linear, right top, left top, from(#e942ff), to(#8838ff));
+  background: linear-gradient(to left, #e942ff, #8838ff);
+  position: relative;
+}
+
+.phone__nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+  width: 100%;
+}
+
+.phone__nav-wrapper .fa-angle-left {
+  color: white;
+  font-size: 1.2rem;
+  margin-left: .5rem;
+}
+
+.phone__nav-wrapper .phone__nav-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  outline: 1.5px solid white;
+}
+
+.phone__nav-wrapper .phone__nav-avatar img {
+  width: 35px;
+}
+
+.phone__nav-wrapper .phone__nav-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: .5rem;
+}
+
+.phone__nav-wrapper .phone__nav-info .phone__nav-name {
+  font-size: 1.2rem;
+  color: white;
+  -webkit-filter: sepia(1);
+          filter: sepia(1);
+  font-weight: 300;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.phone__nav-wrapper .phone__nav-info .phone__nav-status {
+  color: #d89eff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: .8rem;
+}
+
+.phone__nav-wrapper .fa-ellipsis-vertical {
+  position: absolute;
+  right: 1.5rem;
+  color: white;
+}
+
+.phone__nav-whitepart {
+  position: absolute;
+  width: 55%;
+  height: 35px;
+  top: -17.5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 15px;
+  background-color: white;
+}
+
+.phone__chat {
+  background-color: #f5f3f7;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.phone__chat-msgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  padding-top: .5rem;
+}
+
+.phone__chat-msgs .phone__chat-msg {
+  max-width: 180px;
+  background-color: #EDE5F4;
+  padding: .5rem .8rem;
+  border-radius: 12px;
+  font-size: 12px;
+  font-family: 'Rubik';
+}
+
+.phone__chat-msgs .msg-left, .phone__chat-msgs .msg-left-text {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: .5rem;
+  color: #9241c8;
+}
+
+.phone__chat-msgs .msg-left-text {
+  -webkit-box-shadow: -5px 5px 11px #c2bcc8, 5px -5px 11px #ffffff;
+          box-shadow: -5px 5px 11px #c2bcc8, 5px -5px 11px #ffffff;
+}
+
+.phone__chat-msgs .msg-right, .phone__chat-msgs .msg-right-text {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: .5rem;
+}
+
+.phone__chat-msgs .msg-right p, .phone__chat-msgs .msg-right-text p {
+  color: #6e5d7e;
+}
+
+.phone__chat-msgs .msg-right-text {
+  background-color: white;
+  -webkit-box-shadow: -5px 5px 18px #a8a8a8, 5px -5px 18px #ffffff;
+          box-shadow: -5px 5px 18px #a8a8a8, 5px -5px 18px #ffffff;
+}
+
+.phone__chat-msgs .phone__chat-photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5rem;
+}
+
+.phone__chat-msgs .phone__chat-photos .phone__chat-photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.phone__chat-msgs .phone__chat-photos .phone__chat-photo img {
+  width: 45px;
+}
+
+.phone__chat-msgs .phone__chat-bussines {
+  background: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background: linear-gradient(to right, #e942ff, #8838ff);
+  font-family: 'Rubik';
+  max-width: 180px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .8rem 1rem;
+  border-radius: 12px;
+}
+
+.phone__chat-msgs .phone__chat-bussines .phone__chat-info {
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.phone__chat-msgs .phone__chat-bussines .phone__chat-price {
+  font-size: 12px;
+}
+
+.phone__chat-msgs .phone__send {
+  padding: .5rem;
+  width: 94%;
+  margin: 0 auto;
+  border-radius: 12px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+}
+
+.phone__chat-msgs .phone__send input {
+  border: none;
+  outline: none;
+}
+
+.phone__chat-msgs .phone__send input::-webkit-input-placeholder {
+  color: #c6cacd;
+}
+
+.phone__chat-msgs .phone__send input:-ms-input-placeholder {
+  color: #c6cacd;
+}
+
+.phone__chat-msgs .phone__send input::-ms-input-placeholder {
+  color: #c6cacd;
+}
+
+.phone__chat-msgs .phone__send input::placeholder {
+  color: #c6cacd;
+}
+
+.phone__chat-msgs .phone__send .send__button {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: .5rem;
+  background-color: #3e2753;
+}
+
+.phone__chat-msgs .phone__send .send__button:hover {
+  background-color: #e570ff;
+  cursor: pointer;
+}
+
+.phone__chat-msgs .phone__send .send__button i {
+  color: white;
+  text-align: center;
+}
+
+.info {
+  max-width: 400px;
+  padding: 2rem 0;
+}
+
+.info .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+}
+
+.info .container .info__title {
+  color: #3e2753;
+  font-family: 'Rubik';
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.info .container .info__text {
+  font-family: 'Rubik';
+  font-size: 1.2rem;
+  color: #a39daa;
+}
+
+@media only screen and (min-width: 450px) {
+  .phone__wrapper {
+    max-width: 400px;
+    margin: 50px auto;
+  }
+  main .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .geometry {
+    width: 450px;
+    height: 900px;
+    left: -100px;
+    border-bottom-right-radius: 45%;
+  }
+  .phone__wrapper {
+    justify-self: flex-end;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .geometry {
+    width: 550px;
+  }
+  .info {
+    padding-left: 0;
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  .circles, .circles1, .circles2 {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  .circles1 {
+    opacity: .05;
+    background-color: #9241c8;
+    position: absolute;
+    right: -10%;
+    bottom: 40%;
+  }
+  .circles2 {
+    opacity: .07;
+    background-color: #3e2753;
+    position: absolute;
+    bottom: 1%;
+    right: -11%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

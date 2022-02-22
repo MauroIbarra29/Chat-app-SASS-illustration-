@@ -1,0 +1,316 @@
+@import 'config','variables';
+// Background
+
+@mixin gradient($place) {
+    background: linear-gradient(to $place, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+.geometry{
+
+    @include gradient(bottom);
+    position: absolute;
+    width: 480px;
+    height: 840px;
+    left: -210px;
+    top: -200px;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: -1;
+    opacity: .9;
+}
+body{
+    background-color: $app-bg;
+}
+main.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.phone__wrapper{
+    width: 330px;
+    height: auto;
+    background-color: $white;
+    box-shadow: .1px .1px 80px .2px #837e7e;
+    margin: 50px 50px 0 50px;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.phone__nav{
+    flex-basis: 10%;
+    width: 100%;
+    border-radius: 18px 18px 2px 2px;
+    padding: .5rem;
+    padding-top: 1.5rem;
+    @include gradient(left);
+    position: relative;
+
+
+    &-wrapper{
+        display: flex;
+        align-items: center;
+        gap: .5rem;  
+        width: 100%;
+
+         .fa-angle-left{
+             color: $white;
+             font-size: 1.2rem;
+             margin-left: .5rem;
+         }
+        .phone__nav-avatar{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            overflow: hidden;
+            outline: 1.5px solid white;
+            img{
+                width: 35px;
+            }
+        }
+        .phone__nav-info{
+            display: flex;
+            flex-direction: column;
+            margin-left: .5rem;
+            .phone__nav-name{
+                font-size: 1.2rem;
+                color: $white;
+                filter: sepia(1);
+                font-weight: 300;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            }
+            .phone__nav-status{
+                color: $username;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: .8rem;
+            }
+        }
+        .fa-ellipsis-vertical{
+            position: absolute;
+            right: 1.5rem;
+            color: $white;
+        }
+    }
+    &-whitepart{
+        position: absolute;
+        width: 55%;
+        height: 35px;
+        top: -17.5px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 15px;
+        background-color: $white;
+    }
+}
+
+.phone__chat{
+    background-color: $app-bg;
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    &-msgs{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        padding-top: .5rem;
+
+        .phone__chat-msg{
+            max-width: 180px;
+            background-color: #EDE5F4;
+            padding: .5rem .8rem;
+            border-radius: 12px;
+            font-size: 12px;
+            font-family: 'Rubik';
+            
+        }
+        .msg-left{
+            align-self: flex-start;
+            margin-left: .5rem;
+            color: $left-chat;
+        }
+        .msg-left-text{
+            @extend .msg-left;
+            box-shadow:  -5px 5px 11px #c2bcc8,
+             5px -5px 11px #ffffff;
+
+        }
+        .msg-right{
+            align-self: flex-end;
+            margin-right: .5rem;
+            p{
+                color: $right-chat;
+            }
+        }
+        .msg-right-text{
+            @extend .msg-right;
+            background-color: white;
+            box-shadow:  -5px 5px 18px #a8a8a8,
+             5px -5px 18px #ffffff;
+        }
+        .phone__chat-photos{
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            .phone__chat-photo{
+                width: 45px;
+                height: 45px;
+                border-radius: 8px;
+                overflow: hidden;
+                img{
+                    width: 45px;
+                }
+            }
+        
+        }
+        .phone__chat-bussines{
+            @include gradient(right);
+            font-family: 'Rubik';
+            max-width: 180px;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            padding: .8rem 1rem;
+            border-radius: 12px;
+
+            .phone__chat-info{
+                font-size: 11px;
+                font-weight: 300;
+            }
+            .phone__chat-price{
+                font-size: 12px;
+            }
+        }
+        .phone__send{
+            padding: .5rem;
+            width: 94%;
+            margin: 0 auto;
+            border-radius: 12px;
+            background-color: $white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            input{
+                border: none;
+                outline: none;
+                &::placeholder{
+                    color: $placeholder-text
+                }
+            }
+            .send__button{
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                padding: .5rem;
+                background-color: $submit-buttn-bg;
+                &:hover{
+                    background-color: $radio-bttn-ol;
+                    cursor: pointer;
+                }
+                i{
+                    color: $white;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.info{
+    max-width: 400px;
+    padding: 2rem 0;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        .info__title{
+            color: $main-heading;
+            font-family: 'Rubik';
+            font-weight: 800;
+            font-size: 2rem;
+        }
+        .info__text{
+            font-family: 'Rubik';
+            font-size: 1.2rem;
+            color: $parrafo;
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 450px){
+
+        .phone__wrapper{
+            max-width: 400px;
+            margin: 50px auto;
+        }
+        main .container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        .info{
+            align-items: center;
+            padding:  0 3rem;
+        }
+}
+
+@media only screen and (min-width: 768px){
+    .geometry{
+        width: 450px;
+        height: 900px;
+        left: -100px;
+        border-bottom-right-radius: 45%;
+
+    }
+    .phone__wrapper{
+        justify-self: flex-end;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .geometry{
+        width: 550px;
+    }
+    .info{
+        padding-left: 0;
+        transform: translateX(-50px)
+    }
+    .circles{
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    .circles1{
+        @extend .circles;
+        opacity: .05;
+        background-color: $left-chat;
+        position: absolute;
+        right: -10%;
+        bottom: 40%;
+
+    }
+    .circles2{
+        @extend .circles;
+        opacity: .07;
+        background-color: $main-heading;
+        position: absolute;
+        bottom: 1%;
+        right: -11%;
+
+    }
+}
