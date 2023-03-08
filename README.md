@@ -1,6 +1,7 @@
 # Chat-app-SASS-illustration-
 This project is a personal exploration of mine to create a minimalist chat interface using HTML and Sass. The goal of this project was to challenge myself to create a clean and modern design that was both responsive and easy to use.
 
+![](https://github.com/MauroIbarra29/Chat-app-SASS-illustration-/blob/master/dist/img/chat-sass-preview.png)
 ### Knowledge Used
 In this project, I utilized various Sass features to enhance the readability and maintainability of the code. These included:
 
@@ -14,4 +15,4 @@ By utilizing these Sass features, I was able to write more efficient and scalabl
 To use this project, simply clone the repository and open the index.html file in your web browser.
 
 ### Author
-This project was created by [Your Name Here]. If you have any questions or feedback, feel free to reach out to me at [Your Email Here].
+This project was created by Mauro Ibarra. If you have any questions or feedback, feel free to reach out to me at [mauroibarra133@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjgJSKWKHmPqmFhVcbdpDXkLvXbdbKvmrJNnwqfJPMNWgMqGVQhqrqVXKFJDDJKLXxQGbX) or visit my [Linkedin](https://www.linkedin.com/in/mauro-ibarra-665323203/).
